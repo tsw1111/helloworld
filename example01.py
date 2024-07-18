@@ -43,3 +43,5 @@ c = alt.Chart(df2).mark_circle().encode(
 st.write(c)
 
 st.write(df2)
+
+st.write('Hello world')
