@@ -11,7 +11,9 @@ st.header('Line chart')
 chart_data = pd.DataFrame(
      np.random.randn(100, 4),   # 0~99 一共100个数据，共有四组
      columns=['a', 'b', 'c', 'd'])
+my_table = st.table(chart_data)
 st.line_chart(chart_data)
+
 
 
 
@@ -22,12 +24,14 @@ chart_data = pd.DataFrame(
        "col3": np.random.choice(["A", "B", "C"], 50),
    }
 )
+my_table = st.table(chart_data)
 st.line_chart(chart_data, x="col1", y="col2", color="col3")
 
 
 
 
 chart_data = pd.DataFrame(np.random.randn(50, 3), columns=["col1", "col2", "col3"])
+my_table = st.table(chart_data)
 st.line_chart(
    chart_data, x="col1", y=["col2", "col3"], color=["#FF0000", "#0000FF"]  # Optional
 )
